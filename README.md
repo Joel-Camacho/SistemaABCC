@@ -13,49 +13,49 @@ Para comenzar debemos crear una carpeta en la ruta C:xampp/htdocs/* nombre de tu
 Posteriormente en el archivo httpd-vhosts.conf de la ruta C:\xampp\apache\conf\extra, vamos a añadir un virtual host con las lineas de código siguientes:
 
 <VirtualHost *:80>
-    ServerAdmin * nombre de tu carpeta *
-    DocumentRoot "C:/xampp/htdocs/* nombre de tu carpeta */public"
-    ServerName * nombre de tu carpeta *
-    ErrorLog "logs/* nombre de tu carpeta *-error.log"
-    CustomLog "logs/* nombre de tu carpeta *-access.log" common
-    <Directory "C:/xampp/htdocs/* nombre de tu carpeta */public">
-        Options All
-        AllowOverride All
-        Require all granted
-    </Directory>
+    ServerAdmin *nombre de tu carpeta*  
+    DocumentRoot "C:/xampp/htdocs/ *nombre de tu carpeta* /public"  
+    ServerName *nombre de tu carpeta*  
+    ErrorLog "logs/*nombre de tu carpeta*-error.log"  
+    CustomLog "logs/*nombre de tu carpeta*-access.log" common  
+    <Directory "C:/xampp/htdocs/*nombre de tu carpeta*/public">  
+    Options All  
+    AllowOverride All  
+    Require all granted  
+    </Directory>  
 </VirtualHost>
 
 Y despúes nos dirijimos a la ruta C:\Windows\System32\drivers\etc y agragamos la siguiente linea en el archivo "hosts":
 
-127.0.0.1 * nombre de tu carpeta *
+127.0.0.1 *nombre de tu carpeta*
 
-*_ Creación de la base de datos _**
+*_Creación de la base de datos_**
 
-Ya que hicimos estos cambios podemos dar ** Start ** a Apache y a MySQL de xampp y procedemos a entrar en el navegador de nuestra preferencia a * localhost/phpmyadmin *
+Ya que hicimos estos cambios podemos dar **Start** a Apache y a MySQL de xampp y procedemos a entrar en el navegador de nuestra preferencia a *localhost/phpmyadmin*
 
-Aquí debemos crear una base de datos nueva, solo colocamos el nombre y damos en el boton ** Crear **, posteriormente crearemos una tabla con el nombre requerido y colocaremos los detalles de cada campo que coloquemos.
+Aquí debemos crear una base de datos nueva, solo colocamos el nombre y damos en el boton **Crear**, posteriormente crearemos una tabla con el nombre requerido y colocaremos los detalles de cada campo que coloquemos.
 
-**_ Configuración de los archivos de INCLUDES _**
+**_Configuración de los archivos de INCLUDES_**
 
 En el archivo constants debemos cambiar los datos que vienen por los propios, tales como el nombre de la base de datos etcétera.
 
-En el archivo functions vamos a cambiar el link de la función de redirect, solo eliminamos el * example.com * y colocamos el nombre de la carpeta propia.
+En el archivo functions vamos a cambiar el link de la función de redirect, solo eliminamos el *example.com* y colocamos el nombre de la carpeta propia.
 
-**_ Configuración de los archivos de PUBLIC _**
+**_Configuración de los archivos de PUBLIC_**
 En estos archivos solo debemos cambiar las consultas debido a que al cambiar de base de datos las consultas a su vez lo hacen.
 
-**_ Configuración de los archivos de TEMPLATES _**
+**_Configuración de los archivos de TEMPLATES_**
 Aquí en el archivo index y perfume debemos cambiar el codigo de php que muestra los productos en las cards. Se cambia solamente el texto dentro de los corchetes por el nombre de los campos de la nueva base de datos 
-<?=$per['imagen'] ?>   ->     <?=$per['* nombre de tu campo *'] ?>
+< ?=$per['imagen'] ?>   ->     < ?=$per['*nombre de tu campo*'] ?>
 
-Posteriormente en los formularios cambiamos el atributo name por los campos que se tiene en la base de datos, además se debe cambiar el texto del ** placeholder ** por uno referente al nombre del campo que colocamos.
+Posteriormente en los formularios cambiamos el atributo name por los campos que se tiene en la base de datos, además se debe cambiar el texto del **placeholder** por uno referente al nombre del campo que colocamos.
 
 ### Software 📋
 
--[XAMPP](https://www.apachefriends.org/es/download.html) - Servidor
--[MySQL](https://www.apachefriends.org/es/download.html) - Base de datos
--[Github](https://desktop.github.com/) -  Repositorio en Git
--[Visual Studio Code](https://code.visualstudio.com/download) - Editor de código
+-[XAMPP](https://www.apachefriends.org/es/download.html) - Servidor  
+
+-[MySQL](https://www.apachefriends.org/es/download.html) - Base de datos  
+
 
 ### Datos de la institución 📄
 
@@ -68,7 +68,6 @@ Plantel Xonacatlán  Carretera Toluca-Naucalpan
 
 * **Joel Ignacio Camacho Camacho** - *Desarrollador* - [Joel-Camacho](https://github.com/Joel-Camacho)
 
-También puedes mirar las gráficas de todos los [contribuyentes](https://github.com/Joel-Camacho/SistemaABCC/contributors) quíenes han participado en este proyecto. 
 
 ## Licencia 📄
 
